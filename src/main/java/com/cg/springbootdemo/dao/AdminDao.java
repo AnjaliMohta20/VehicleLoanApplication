@@ -1,4 +1,4 @@
-package com.cg.springbootdemo.services;
+package com.cg.springbootdemo.dao;
 
 import java.util.List;
 
@@ -12,8 +12,7 @@ import com.cg.springbootdemo.entities.LoginDetail;
 import com.cg.springbootdemo.entities.UserDetails;
 import com.cg.springbootdemo.entities.UserRegistration;
 
-
-public interface AdminService {
+public interface AdminDao {
 	public AdminRegistration adminRegisterService(AdminRegistration admin);
 	public LoginDetail verifyAdminLogin(LoginDetail login);
 	public void modifyLoanApplicationStatus(LoanApplication loanapp);
@@ -23,8 +22,8 @@ public interface AdminService {
 	public List<UserDetails> viewAllRejectedUser();
 	public List<UserDetails> viewAllPendingUser();
 	public Account getAccountByEmailService(String email);
-	public void addApprovedDetails(ApprovedLoans approved);
+	public void addApprovedLoan(ApprovedLoans approved);
 	public List<LoanApplication> viewAllAcceptedLoanApplications();
 	public List<LoanApplication> viewAllRejectedLoanApplications();
-	public double emiCalculate(@PathVariable double p, @PathVariable int n, @PathVariable double r);
+	
 }

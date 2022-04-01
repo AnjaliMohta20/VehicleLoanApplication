@@ -15,6 +15,7 @@ public class UserDetails {
 	@Id
 	@GeneratedValue
 	private Integer userDetailsId;
+	private String  useraddress;
 	private String userState;
 	private String userCity;
 	private int userPinCode;
@@ -29,6 +30,15 @@ public class UserDetails {
 	public Integer getUserDetailsId() {
 		return userDetailsId;
 	}
+	
+	public String getUseraddress() {
+		return useraddress;
+	}
+
+	public void setUseraddress(String useraddress) {
+		this.useraddress = useraddress;
+	}
+
 	public void setUserDetailsId(Integer userDetailsId) {
 		this.userDetailsId = userDetailsId;
 	}
