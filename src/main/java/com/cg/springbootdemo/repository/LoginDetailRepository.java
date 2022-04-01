@@ -7,5 +7,7 @@ import com.cg.springbootdemo.entities.LoginDetail;
 
 @Repository
 public interface LoginDetailRepository extends JpaRepository<LoginDetail, String>{
+	
+	LoginDetail findByEmailAndPassword(String email, String password);
 
 }
